@@ -1,0 +1,18 @@
+:root {
+    --bg-main-color: #6E1919;
+    --bg-footer-color: #E4C58A;
+
+    /* text color */
+    --primary-text-color: #F08475;
+    --secondary-text-color: #E1D9C7;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-main-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
