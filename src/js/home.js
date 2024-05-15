@@ -1,46 +1,32 @@
+import createElement from "./createElement"
+//function createElement(tag, className, container)
 
 export default function addHomeElement(){
     const content = document.getElementById('content')
 
-    const home = document.createElement('section')
+    //Create home section
+    const home = createElement('section', 'home', content)
     home.id = 'home'
 
-    content.appendChild(home)
-
-    const homeInfo = document.createElement('div');
-    homeInfo.classList.add('home-info')
-
-    home.appendChild(homeInfo)
-
-    const homeTitle = document.createElement('h2')
-    homeTitle.classList.add('home-title')
+    //create home info
+    const homeInfo = createElement('div', 'home-info', home)
+    
+    //create home info title
+    const homeTitle = createElement('h2', 'home-title', homeInfo)
     homeTitle.textContent = 'Pizza Art Meets Japanese Hospitality';
-    homeInfo.appendChild(homeTitle)
 
+    //create home info description
+    const homeInfoDescriptionContainer = createElement('div', 'home-info-description-container', homeInfo)
 
-    const homeInfoDescriptionContainer = document.createElement('div');
-    homeInfoDescriptionContainer.classList.add('home-info-description-container')
-
-    homeInfo.appendChild(homeInfoDescriptionContainer);
-
-    const homeInfoDescriptionText = document.createElement('p');
-    homeInfoDescriptionText.classList.add('home-info-decription-text');
+    const homeInfoDescriptionText = createElement('p', 'home-info-description-text', homeInfoDescriptionContainer)
     homeInfoDescriptionText.textContent = 'Experience authentic Neapolitan pizza crafted using traditional techniques and baked in a wood-fired oven. At Pizzanpoli, we aim to bridge cultures by blending Italian pizza art with Japanese precision and hospitality. Come and enjoy our unique pizza sushi that fuses Italian and Japanese cuisine'
-    homeInfoDescriptionContainer.appendChild(homeInfoDescriptionText)
 
-    const discoverMoreBtn = document.createElement('button');
-    discoverMoreBtn.classList.add('discover-more-btn');
+    //create discover more button
+    const discoverMoreBtn = createElement('button', 'discover-more-btn', homeInfoDescriptionContainer)
     discoverMoreBtn.textContent = 'Discover More'
-    homeInfoDescriptionContainer.appendChild(discoverMoreBtn)
-
-    const infoPic = document.createElement('div');
-    infoPic.classList.add('info-pic')
-
-    home.appendChild(infoPic)
-
-    const mainPic = document.createElement('img')
-    mainPic.classList.add('main-pic');
-    infoPic.appendChild(mainPic)
+    
+    //create home pic container
+    const infoPic = createElement('div', 'info-pic', home)
 
     return home
 

@@ -1,59 +1,38 @@
+import createElement from "./createElement"
+//function createElement(tag, className, container)
+import pizzapic from '../img/aboutMainPic.jpg'
+import winepic from '../img/aboutSecondaryPic.jpg'
+
 export default function addAboutElement(){
     const content = document.getElementById('content')
-
-    const about = document.createElement('section');
+    // about section
+    const about = createElement('section', 'about', content)
     about.id = 'about'
-    content.appendChild(about);
-
-    const aboutTitleContainer = document.createElement('div');
-    aboutTitle.classList.add('about-title-container')
-
-    about.appendChild(aboutTitleContainer);
-
-    const aboutTitle = document.createElement('h2');
-    aboutTitle.classList.add('about-title');
+    // about title container
+    const aboutTitleContainer = createElement('div', 'about-title-container', about)
+    // about title
+    const aboutTitle = createElement('h2', 'about-title', aboutTitleContainer)
     aboutTitle.textContent = 'Our Philosophy';
+    // info
+    const aboutInfo = createElement('div', 'about-info', about)
+    // pic
+    const aboutPicContainer = createElement('div', 'about-pic-container', aboutInfo)
 
-    aboutTitleContainer.appendChild(aboutTitle);
+    const picContainer = createElement('div', 'pic-container', aboutPicContainer)
 
-    const aboutInfo = document.createElement('div')
-    aboutInfo.classList.add('about-info');
-    about.appendChild(aboutInfo)
+    const aboutMainPic = createElement('img', 'about-main-pic', picContainer)
+    aboutMainPic.src = pizzapic
 
-    const aboutPicContainer = document.createElement('div');
-    aboutPicContainer.classList.add('about-pic-container');
-    aboutInfo.appendChild(aboutPicContainer);
+    const secondaryPic = createElement('img', 'secondary-pic', picContainer)
+    secondaryPic.src = winepic
+    // story section
+    const aboutStoryContainer = createElement('div', 'about-story-container', aboutInfo)
 
-    const picContainer = document.createElement('div');
-    picContainer.classList.add('pic-container');
-    aboutPicContainer.appendChild(picContainer)
-
-    const aboutMainPic = document.createElement('img')
-    aboutMainPic.classList.add('about-main-pic');
-    aboutMainPic.src = '../img/aboutMainPic.jpg'
-
-    const secondaryPic = document.createElement('img')
-    secondaryPic.classList.add('secondary-pic');
-    secondaryPic.src = '../img/aboutSecondaryPic.jpg'
-
-    picContainer.appendChild(aboutMainPic);
-    picContainer.appendChild(secondaryPic)
-
-    const aboutStoryContainer = document.createElement('div');
-    aboutStoryContainer.classList.add('about-story-container');
-
-    about.appendChild(aboutStoryContainer)
-
-    const aboutStoryTitle = document.createElement('h2');
+    const aboutStoryTitle = createElement('h2', undefined, aboutStoryContainer )
     aboutStoryTitle.textContent = 'Our Story'
 
-    aboutStoryContainer.appendChild(aboutStoryTitle);
-
-    const aboutStoryText = document.createElement('p');
+    const aboutStoryText = createElement('p', undefined, aboutStoryContainer)
     aboutStoryText.textContent = `At Pizzanapoli, we believe thath great food should be an experience that ignites all the senses. That's why we use only the freshest ingredients, imported directly from Italy, and bake our pizzas in a wood-fired oven that infuses them with a smoky flavor and a crispy crust. Our story began in Tokyo in 2000, with a passion for pizza and a dream of creating a dining experience that celebrates the art of pizza making.`
 
-    aboutStoryContainer.appendChild(aboutStoryText)
-
     return about
-
 }
