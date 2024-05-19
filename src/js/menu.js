@@ -27,8 +27,7 @@ export default function addMenuElement(){
                 platePrice.textContent = prezzo
 
                 const ingredients = createElement('p', 'plate-description', plate);
-                ingredients.textContent = ingredienti.join(", ")
-                console.log(nome)
+                ingredients.textContent = ingredienti.join(', ')
             })
 
             
