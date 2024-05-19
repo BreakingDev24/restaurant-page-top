@@ -5,7 +5,7 @@ This is a simple restaurant website project developed using HTML, CSS, and JavaS
 ## Features
 - A homepage displaying restaurant information.
 - A menu page showcasing the restaurant's dishes.
-- A contact page with the restaurant's contact details.
+- An about page with the restaurant's history details.
 
 ## Acknowledgements
 
