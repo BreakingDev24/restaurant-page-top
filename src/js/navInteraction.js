@@ -6,7 +6,6 @@ import addMenuElement from './menu.js'
 
 console.log("Hello World!");
 
-const navbar = document.querySelector('.nav-bar') 
 
 let lastClickedButton = null
 export default function handleButtonClick(e){
