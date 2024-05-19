@@ -2,9 +2,7 @@ import addHomeElement from './home.js'
 import addAboutElement from './about.js'
 import addMenuElement from './menu.js'
 
-addHomeElement()
-// addAboutElement()
-// addMenuElement()
+
 
 console.log("Hello World!");
 
