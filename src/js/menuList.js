@@ -47,9 +47,9 @@ export default function menuList() {
             "ingredienti": ["panna", "vaniglia", "gelatina", "salsa di frutti di bosco"]
           },
           {
-            "nome": "Gelato Artigianale",
-            "prezzo": "3.50",
-            "varianti": ["cioccolato", "vaniglia", "fragola"]
+            "nome": "Cheesecake",
+            "prezzo": "4.00",
+            "ingredienti": ["formaggio cremoso", "biscotti", "burro", "zucchero", "vaniglia", "frutti di bosco"]
           }
         ]
       }
