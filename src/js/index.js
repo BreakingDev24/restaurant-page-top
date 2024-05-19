@@ -5,8 +5,6 @@ import initializeButtonnLister from './navInteraction.js'
 
 
 addHomeElement()
-// addAboutElement()
-// addMenuElement()
 
 initializeButtonnLister()
 
