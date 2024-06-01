@@ -13,11 +13,16 @@ export default function initializeButtonnLister(){
     function handleButtonClick(e){
         let eventTarget = e.target;
     
+        if(eventTarget.nodeName !== 'BUTTON'){
+            return
+        }
+
         if(lastClickedButton){
             lastClickedButton.classList.remove('active')
         }
-    
         eventTarget.classList.add('active')
+
+    
         lastClickedButton = eventTarget
     
         const content = document.getElementById('content');
@@ -32,7 +37,9 @@ export default function initializeButtonnLister(){
                 break;
             case 'about-btn':
                 addAboutElement();
-                break
+                break;
+            default:
+                return
         }
     }
     navbar.addEventListener('click', handleButtonClick)
